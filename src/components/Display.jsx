@@ -9,7 +9,7 @@ function Display({ themeToggle, currentOperand, operator }) {
       }
     >
       <div className="container-screen container--display">
-        <p className="text-700 text-text-base text-right">
+        <p className="text-700 text-text-base text-right break-words">
           {currentOperand ?? operator ?? "0"}
         </p>
       </div>
