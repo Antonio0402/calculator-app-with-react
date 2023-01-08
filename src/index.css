@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  /* Theme-color */
+  :root {
+    --main-fill: 224deg 36% 15%;
+    --keypad-fill: 223deg 31% 20%;
+    --toggle-fill: var(--keypad-fill);
+    --screen-fill: 222deg 26% 31%;
+
+    --keys-fn: 225deg 21% 49%;
+    --keys-fn-shadow: 224deg 28% 35%;
+    --keys-equal: 6deg 63% 50%;
+    --toggle: var(--keys-equal);
+    --keys-equal-shadow: 6deg 70% 34%;
+    --keys-number: 30deg 25% 89%;
+    --keys-number-shadow: 28deg 16% 65%;
+
+    --text-base: 0deg 0% 100%;
+    --text-keys-fn: var(--text-base);
+    --text-keys-number: 221deg 14% 31%;
+
+    --fs-700: 2.5rem; /* 40px tracking-[-0.015em] */
+    --fs-600: 2rem; /* 40px  leading-none */
+    --fs-500: 2rem; /* 32px tracking-[-0.015em] */
+    --fs-400: 1.25rem; /* 20px */
+    --fs-300: 0.75rem; /* 12px leading-none tracking-[0.08em] */
+
+    /* Tracking */
+    --tracking-wider-80: 0.08em;
+    --tracking-tighter-15: -0.015em;
+  }
+
+  .theme-2 {
+    --main-fill: 0deg 0% 90%;
+    --keypad-fill: 0deg 5% 81%;
+    --toggle-fill: var(--keypad-fill);
+    --screen-fill: 0deg 0% 93%;
+
+    --keys-fn: 185deg 42% 37%;
+    --keys-fn-shadow: 185deg 58% 25%;
+    --keys-equal: 25deg 98% 40%;
+    --toggle: var(--keys-equal);
+    --keys-equal-shadow: 25deg 99% 27%;
+    --keys-number: 45deg 7% 89%;
+    --keys-number-shadow: 35deg 11% 61%;
+
+    --text-base: 60deg 10% 19%;
+    --text-keys-fn: 0deg 0% 100%;
+    --text-keys-number: var(--text-base);
+  }
+
+  .theme-3 {
+    --main-fill: 268deg 75% 9%;
+    --keypad-fill: 268deg 71% 12%;
+    --toggle-fill: var(--main-fill);
+    --screen-fill: var(--keypad-fill);
+
+    --keys-fn: 281deg 89% 26%;
+    --keys-fn-shadow: 285deg 91% 52%;
+    --keys-equal: 176deg 100% 44%;
+    --toggle: var(--keys-equal);
+    --keys-equal-shadow: 177deg 92% 70%;
+    --keys-number: 268deg 47% 21%;
+    --keys-number-shadow: 290deg 70% 36%;
+
+    --text-base: 52deg 100% 62%;
+    --text-keys-fn: 0deg 0% 100%;
+    --text-keys-number: var(--text-base);
+    --text-keys-equal: 198deg 20% 13%;
+  }
+
+  /* Font size */
+  @screen sm {
+    :root {
+      --fs-700: 3.5rem; /* 56px leading-none */
+      --fs-600: 2.5rem;
+      --fs-400: 1.75rem; /* 28px leading-none */
+    }
+  }
+}
+
+@layer components {
+  .keypad {
+    @apply relative px-1 flex items-center bg-fill-toggle w-full h-6 rounded-full before:content-[""] before:absolute top-0 left-0 before:w-5 before:h-5 before:rounded-full before:bg-toggle before:transition-all before:duration-200;
+  }
+  .key {
+    @apply border-0 outline-none rounded-md py-4 sm:py-3 bg-keys-number  shadow-shadow-number shadow-[0_4px] active:brightness-150 active:translate-y-1 active:shadow-none transition-all text-600 text-text-keys-number;
+  }
+
+  .fnc {
+    @apply text-400 bg-keys-fn text-text-keys-fn shadow-shadow-fn;
+  }
+
+  .reset {
+    @apply col-start-1 col-end-3;
+  }
+
+  .equal {
+    @apply col-start-3 col-end-5 shadow-shadow-equal bg-keys-equal;
+  }
+}
+
+@layer utilities {
+  .text-700 {
+    @apply text-[length:var(--fs-700)] tracking-tighter-15 sm:tracking-normal;
+  }
+  .text-600 {
+    @apply text-[length:var(--fs-600)];
+  }
+  .text-500 {
+    @apply text-[length:var(--fs-500)] tracking-tighter-15 sm:tracking-normal;
+  }
+  .text-400 {
+    @apply text-[length:var(--fs-400)];
+  }
+  .text-300 {
+    @apply text-[length:var(--fs-300)] sm:tracking-wider-80;
+  }
+
+  .container-screen {
+    @apply max-w-[410px] sm:max-w-[480px];
+  }
+
+  .container--display {
+    @apply p-6 sm:py-9 sm:px-8;
+  }
+
+  .container--main {
+    @apply px-6 py-6 sm:px-8 sm:py-7;
+  }
+}
