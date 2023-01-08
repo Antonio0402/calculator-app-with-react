@@ -30,11 +30,11 @@ Users should be able to:
 ### Screenshot
 
 ![Mobile Theme-1 Design](./screenshots/mobile-design-theme-1.png)
-![Mobile Theme-2 Design](./screenshots/mobile-design-theme-1.png)
-![Mobile Theme-3 Design](./screenshots/mobile-design-theme-1.png)
+![Mobile Theme-2 Design](./screenshots/mobile-design-theme-2.png)
+![Mobile Theme-3 Design](./screenshots/mobile-design-theme-3.png)
 ![Desktop Theme-1 Design](./screenshots/desktop-design-theme-1.png)
-![Desktop Theme-2 Design](./screenshots/desktop-design-theme-1.png)
-![Desktop Theme-3 Design](./screenshots/desktop-design-theme-1.png)
+![Desktop Theme-2 Design](./screenshots/desktop-design-theme-2.png)
+![Desktop Theme-3 Design](./screenshots/desktop-design-theme-3.png)
 
 ### Links
 
